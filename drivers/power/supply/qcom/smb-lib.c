@@ -7016,9 +7016,9 @@ static void rdstd_cc2_detach_work(struct work_struct *work)
 		mutex_lock(&chg->lock);
 		lock = true;
 	}
-
+	
 	smblib_usb_typec_change(chg);
-
+	
 	if (lock)
 		mutex_unlock(&chg->lock);
 	return;
