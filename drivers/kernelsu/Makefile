@@ -18,6 +18,10 @@ KSU_GIT_VERSION := $(shell cd $(srctree)/$(src); /usr/bin/env PATH="$$PATH":/usr
 ccflags-y += -DKSU_GIT_VERSION=$(KSU_GIT_VERSION)
 endif
 
+# Fix build without using submodule
+KSU_GIT_VERSION := 631
+ccflags-y += -DKSU_GIT_VERSION=$(KSU_GIT_VERSION)
+
 ifndef EXPECTED_SIZE
 EXPECTED_SIZE := 0x033b
 endif
