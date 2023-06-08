@@ -19,7 +19,7 @@ ccflags-y += -DKSU_GIT_VERSION=$(KSU_GIT_VERSION)
 endif
 
 # Fix build without using submodule
-KSU_GIT_VERSION := 631
+KSU_GIT_VERSION := 785
 ccflags-y += -DKSU_GIT_VERSION=$(KSU_GIT_VERSION)
 
 ifndef EXPECTED_SIZE
@@ -33,4 +33,4 @@ endif
 ccflags-y += -DEXPECTED_SIZE=$(EXPECTED_SIZE)
 ccflags-y += -DEXPECTED_HASH=$(EXPECTED_HASH)
 ccflags-y += -Wno-implicit-function-declaration -Wno-strict-prototypes -Wno-int-conversion -Wno-gcc-compat
-ccflags-y += -Wno-macro-redefined -Wno-declaration-after-statement
+ccflags-y += -Wno-declaration-after-statement
