@@ -13,7 +13,7 @@ obj-y += kernel_compat.o
 
 obj-y += selinux/
 # Execute git rev-list --count HEAD on KernelSU repo to get KSU_GIT_VERSION
-KSU_GIT_VERSION := 906
+KSU_GIT_VERSION := 991
 # ksu_version: major * 10000 + git version + 200 for historical reasons
 $(eval KSU_VERSION=$(shell expr 10000 + $(KSU_GIT_VERSION) + 200))
 $(info -- KernelSU version: $(KSU_VERSION))
